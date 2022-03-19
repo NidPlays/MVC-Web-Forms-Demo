@@ -17,8 +17,20 @@ namespace MVC_Web_Forms.Controllers
             return View(dlist);
         }
 
+        [HttpGet]
         public ActionResult Create()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Doctor dc)
+        {
+            if( ModelState.IsValid)
+            {
+                hc.doctor.Add(dc);
+                hc.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
             return View();
         }
     }
