@@ -4,7 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Index</h2
+@Html.ActionLink("","", new { @class = "btn btn-success" })
 
 <table class="table table-striped">
     <tr>
@@ -19,6 +20,8 @@
             <td>@Html.DisplayFor(x => item.id)</td>
             <td>@Html.DisplayFor(x => item.name)</td>
             <td>@Html.DisplayFor(x => item.speciality)</td>
+            <td>@Html.ActionLink("Edit","Edit",new { @id = item.id }, new { @class = "btn btn-success" })</td>
+            <td>@Html.ActionLink("Delete","Delete",new { @id = item.id }, new { @class = "btn btn-danger" })</td>
         </tr>
     }
 
