@@ -9,6 +9,7 @@ namespace MVC_Web_Forms.Controllers
 {
     public class DoctorsController : Controller
     {
+        //CRUD create, read, update, delete
         HospitalContext hc = new HospitalContext();
         // GET: Doctors
         public ActionResult Index()
@@ -33,5 +34,7 @@ namespace MVC_Web_Forms.Controllers
             }
             return View();
         }
+
+
     }
 }

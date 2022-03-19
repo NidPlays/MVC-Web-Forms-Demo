@@ -7,5 +7,7 @@ namespace MVC_Web_Forms.Models
         public DbSet<Doctor> doctor { get; set; }
         public DbSet<Patient> patient { get; set; }
 
+        public DbSet<Appointment> apt { get; set; }
+
     }
 }
