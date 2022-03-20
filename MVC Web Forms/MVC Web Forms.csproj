@@ -168,7 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AppointmentController.cs" />
+    <Compile Include="Controllers\AppointmentsController.cs" />
     <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -187,6 +187,14 @@
     <Compile Include="Migrations\202203190848123_third.cs" />
     <Compile Include="Migrations\202203190848123_third.Designer.cs">
       <DependentUpon>202203190848123_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203200619227_foruth.cs" />
+    <Compile Include="Migrations\202203200619227_foruth.Designer.cs">
+      <DependentUpon>202203200619227_foruth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203200718090_fifth.cs" />
+    <Compile Include="Migrations\202203200718090_fifth.Designer.cs">
+      <DependentUpon>202203200718090_fifth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -265,6 +273,8 @@
     <Content Include="Views\Patients\Edit.cshtml" />
     <Content Include="Views\Patients\Details.cshtml" />
     <Content Include="Views\Doctors\Details.cshtml" />
+    <Content Include="Views\Appointments\Create.cshtml" />
+    <Content Include="Views\Appointments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -292,6 +302,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203190848123_third.resx">
       <DependentUpon>202203190848123_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203200619227_foruth.resx">
+      <DependentUpon>202203200619227_foruth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203200718090_fifth.resx">
+      <DependentUpon>202203200718090_fifth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

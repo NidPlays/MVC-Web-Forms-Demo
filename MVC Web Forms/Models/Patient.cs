@@ -11,7 +11,11 @@ namespace MVC_Web_Forms.Models
         public int id { get; set; }
         [Display(Name = "Name")]        
         public string name { get; set; }
+
+        [Display(Name ="Temperature")]
         public float temp { get; set; }
+
+        [Display(Name = "Allergies")]
         public string allergies { get; set; }
     }
 }

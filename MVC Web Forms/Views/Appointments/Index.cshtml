@@ -1,0 +1,32 @@
+﻿    @model IEnumerable<MVC_Web_Forms.Models.Appointment>
+    @{
+        ViewBag.Title = "Index";
+    }
+
+
+    <h2>Index of Appointment</h2>
+    @Html.ActionLink("Add New Patient", "Create", "Appointments", new { @class = "btn btn-success" })
+
+    <table class="table table-striped">
+        <tr>
+            <th>@Html.DisplayNameFor(x => x.id)</th>
+            <th>@Html.DisplayNameFor(x => x.doc.name)</th>
+            <th>@Html.DisplayNameFor(x => x.pt.name)</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(x => item.id)</td>
+                <td>@Html.DisplayFor(x => item.doc.name)</td>
+                <td>@Html.DisplayFor(x => item.pt.name)</td>
+                <td>@Html.ActionLink("Details", "Details", new { @id = item.id }, new { @class = "btn btn-default" })</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { @id = item.id }, new { @class = "btn btn-success" })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { @id = item.id }, new { @class = "btn btn-danger" })</td>
+            </tr>
+        }
+
+</table>
