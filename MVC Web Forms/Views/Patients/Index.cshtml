@@ -3,22 +3,29 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Index of Patients</h2>
+@Html.ActionLink("Add New Patient", "Create", "Patients", new { @class = "btn btn-success" })
 
 <table class="table table-striped">
     <tr>
         <th>@Html.DisplayNameFor(x => x.name)</th>
         <th>@Html.DisplayNameFor(x => x.temp)</th>
         <th>@Html.DisplayNameFor(x => x.allergies)</th>
-     </tr>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
 
     @foreach (var item in Model)
-     {
-                <tr>
-                    <td>@Html.DisplayFor(x => item.name)</td>
-                    <td>@Html.DisplayFor(x => item.temp)</td>
-                    <td>@Html.DisplayFor(x => item.allergies)</td>
-                </tr>
-     }
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => item.name)</td>
+            <td>@Html.DisplayFor(x => item.temp)</td>
+            <td>@Html.DisplayFor(x => item.allergies)</td>
+            <td>@Html.ActionLink("Details","Details",new { @id = item.id }, new { @class = "btn btn-default" })</td>
+            <td>@Html.ActionLink("Edit","Edit",new { @id = item.id }, new { @class = "btn btn-success" })</td>
+            <td>@Html.ActionLink("Delete","Delete",new { @id = item.id }, new { @class = "btn btn-danger" })</td>
+        </tr>
+    }
 
 </table>

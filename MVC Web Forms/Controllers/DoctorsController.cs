@@ -69,5 +69,12 @@ namespace MVC_Web_Forms.Controllers
             }
             return View(hc);
         }
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            return View(hc.doctor.Single(x => x.id == id));
+        }
+
     }
 }

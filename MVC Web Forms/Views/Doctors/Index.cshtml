@@ -4,14 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-@Html.ActionLink("Add New Doctor",  "Create","Doctors", new { @class = "btn btn-danger" })
+<h2>Index of Doctors</h2>
+@Html.ActionLink("Add New Doctor",  "Create","Doctors", new { @class = "btn btn-success" })
 
 <table class="table table-striped">
     <tr>
         <th>@Html.DisplayNameFor(x => x.id)</th>
         <th>@Html.DisplayNameFor(x => x.name)</th>
         <th>@Html.DisplayNameFor(x => x.speciality)</th>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 
     @foreach (var item in Model)
@@ -20,6 +23,7 @@
             <td>@Html.DisplayFor(x => item.id)</td>
             <td>@Html.DisplayFor(x => item.name)</td>
             <td>@Html.DisplayFor(x => item.speciality)</td>
+            <td>@Html.ActionLink("Details","Details",new { @id = item.id }, new { @class = "btn btn-default" })</td>
             <td>@Html.ActionLink("Edit","Edit",new { @id = item.id }, new { @class = "btn btn-success" })</td>
             <td>@Html.ActionLink("Delete","Delete",new { @id = item.id }, new { @class = "btn btn-danger" })</td>
         </tr>
