@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MVC_Web_Forms.Controllers
 {
+    [Authorize(Roles = "doctor")]
     public class PatientsController : Controller
     {
         // GET: Patients
