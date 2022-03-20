@@ -5,13 +5,16 @@
 
 
     <h2>Index of Appointment</h2>
-    @Html.ActionLink("Add New Patient", "Create", "Appointments", new { @class = "btn btn-success" })
+    @Html.ActionLink("Add New Appointment", "Create", "Appointments", new { @class = "btn btn-success" })
 
     <table class="table table-striped">
         <tr>
             <th>@Html.DisplayNameFor(x => x.id)</th>
             <th>@Html.DisplayNameFor(x => x.doc.name)</th>
             <th>@Html.DisplayNameFor(x => x.pt.name)</th>
+            <th>@Html.DisplayNameFor(x => x.appointDate)</th>
+            <th>@Html.DisplayNameFor(x => x.ptEmail)</th>
+
             <th>Details</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -23,6 +26,9 @@
                 <td>@Html.DisplayFor(x => item.id)</td>
                 <td>@Html.DisplayFor(x => item.doc.name)</td>
                 <td>@Html.DisplayFor(x => item.pt.name)</td>
+                <td>@Html.DisplayFor(x => item.appointDate)</td>
+                <td>@Html.DisplayFor(x => item.ptEmail) </td>
+                
                 <td>@Html.ActionLink("Details", "Details", new { @id = item.id }, new { @class = "btn btn-default" })</td>
                 <td>@Html.ActionLink("Edit", "Edit", new { @id = item.id }, new { @class = "btn btn-success" })</td>
                 <td>@Html.ActionLink("Delete", "Delete", new { @id = item.id }, new { @class = "btn btn-danger" })</td>
