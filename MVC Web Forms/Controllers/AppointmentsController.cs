@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MVC_Web_Forms.Controllers
 {
+    [Authorize]
     public class AppointmentsController : Controller
     {
         HospitalContext hc = new HospitalContext();
@@ -30,7 +31,7 @@ namespace MVC_Web_Forms.Controllers
         {
             if(ModelState.IsValid)
             {
-                apt.ptEmail = "1rn19is094@rnsit.ac.in";
+                apt.ptEmail = HttpContext.User.Identity.Name;
                 hc.apt.Add(apt);
                 hc.SaveChanges();
                 return RedirectToAction("Index");

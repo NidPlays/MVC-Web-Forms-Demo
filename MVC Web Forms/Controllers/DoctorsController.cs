@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MVC_Web_Forms.Controllers
 {
+    [Authorize(Roles ="admin")]
     public class DoctorsController : Controller
     {
         //CRUD create, read, update, delete
